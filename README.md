@@ -58,9 +58,33 @@ Emergency Signaling System </br>
 Weighing Machines </br>
 
 ## CIRCUIT DIAGRAM
+![exp1_proto](https://github.com/anishkumar-Embedded/Led-control-using-Arduino/assets/120103862/43e067dc-9216-4168-8ec1-d7106d552b5f)
 
 ## PROGRAM
+```
+const int buttonPin = 3;     
+const int ledPin =  13;     
+int buttonState = 0;         
+void setup() {
+  pinMode(ledPin, OUTPUT);
+  pinMode(buttonPin, INPUT);
+}
+void loop()
+{
+  buttonState = digitalRead(buttonPin);
+  if (buttonState == HIGH) 
+{
+  digitalWrite(ledPin, HIGH);
+} 
+  else 
+{
+  digitalWrite(ledPin, LOW);
+}
+}
+```
 
 ## OUTPUT
+![exp1_out_proto](https://github.com/anishkumar-Embedded/Led-control-using-Arduino/assets/120103862/d72fbfc1-5646-42fe-81db-785705fdf1b4)
 
 ## RESULT
+Thus an LED control system using arduino microcontroller and a push button is implemented
